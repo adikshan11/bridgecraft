@@ -165,7 +165,7 @@ class McpServerTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(response.data.count(b'<li style="--i: '), 13)
         self.assertEqual(response.data.count(b'class="is-off"'), 5)
         self.assertIn(b"<h3 class=\"app-group-title\">Not hosted yet</h3>", response.data)
-        self.assertIn(b"My fix is in review", response.data)
+        self.assertIn(b"Merged, not in 0.19.0", response.data)
         self.assertIn(b'href="https://github.com/storytold/lightcraft"', response.data)
         # Privacy is a footer link, not a homepage section; footer links carry no arrows.
         self.assertNotIn(b'id="privacy"', response.data)
