@@ -255,7 +255,7 @@ class McpServerTests(unittest.IsolatedAsyncioTestCase):
             self.assertIn(text, response.data)
         for app in (b"WordCraft", b"SoundCraft", b"EffectCraft", b"LightCraft"):
             self.assertIn(app, response.data)
-        self.assertIn(b"Not hosted. A project can still read footage", response.data)
+        self.assertIn(b"Not hosted. storytold/effectcraft#2719 is merged.", response.data)
         self.assertIn(b'href="https://github.com/storytold/cadcraft/pull/1904"', response.data)
         self.assertIn(b'data-theme-toggle', response.data)
 
